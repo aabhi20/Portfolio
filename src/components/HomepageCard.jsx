@@ -1,5 +1,6 @@
 import movie from "../assets/images/1st.jpeg";
 import todo from "../assets/images/todo.jpeg";
+import todo2 from "../assets/images/todo2.png";
 import food from "../assets/images/3rd.jpeg";
 
 function HomepageCard() {
@@ -16,9 +17,9 @@ function HomepageCard() {
         className="absolute w-[30vw] sm:w-[170px] rounded-xl shadow-xl transform rotate-0 z-10"
       />
       <img
-        src={todo}
+        src={todo2}
         alt="todo"
-        className="absolute object-cover h-[] w-[30vw] md:h-[35vh] sm:w-[170px] rounded-xl shadow-xl transform rotate-[20deg] translate-x-[80px] z-0"
+        className="absolute object-cover w-[30vw] md:h-[35vh] sm:w-[170px] rounded-[8px] shadow-xl transform rotate-[19deg] translate-x-[78px] z-0"
       />
     </div>
   );
