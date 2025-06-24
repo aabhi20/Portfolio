@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Food-Delivery Frontend Website",
     description: "",
-    image: food, // add actual image in /public or /assets
+    image: food,
     stack: ["React", "Tailwind", "Framer Motion"],
     live: "https://food-delivery-by-abhay.vercel.app/",
     github: "https://github.com/aabhi20/Food-Delivery",
@@ -23,6 +23,7 @@ const projects = [
     github: "https://github.com/aabhi20/moovy",
   },
   {
+    id:todo,
     title: "Task Manager",
     description: "A simple task manager with CRUD features.",
     image: todo,

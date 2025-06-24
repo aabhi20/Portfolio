@@ -16,7 +16,9 @@ const ProjectCard = ({ project, onClick }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          className={`w-full h-full object-cover ${
+            project.id === "todo" ? "object-top" : "object-center"
+          } hover:scale-105 transition-transform duration-300`}
         />
       </div>
 

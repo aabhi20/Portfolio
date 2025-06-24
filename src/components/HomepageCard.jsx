@@ -1,5 +1,5 @@
 import movie from "../assets/images/1st.jpeg";
-import Portfolio from "../assets/images/2nd.jpeg";
+import todo from "../assets/images/todo.jpeg";
 import food from "../assets/images/3rd.jpeg";
 
 function HomepageCard() {
@@ -11,14 +11,14 @@ function HomepageCard() {
         className="absolute w-[30vw] sm:w-[170px]  rounded-xl shadow-xl transform rotate-[-20deg] translate-x-[-80px] z-0"
       />
       <img
-        src={Portfolio}
-        alt="Portfolio"
-        className="absolute w-[30vw] sm:w-[170px] border-2 border-white rounded-xl shadow-xl transform rotate-0 z-10"
+        src={food}
+        alt="food"
+        className="absolute w-[30vw] sm:w-[170px] rounded-xl shadow-xl transform rotate-0 z-10"
       />
       <img
-        src={food}
-        alt="Food"
-        className="absolute w-[30vw] sm:w-[170px] rounded-xl shadow-xl transform rotate-[20deg] translate-x-[80px] z-0"
+        src={todo}
+        alt="todo"
+        className="absolute object-cover h-[] w-[30vw] md:h-[35vh] sm:w-[170px] rounded-xl shadow-xl transform rotate-[20deg] translate-x-[80px] z-0"
       />
     </div>
   );
