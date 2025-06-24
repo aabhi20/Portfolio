@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+/* Primary color: #2E4053 (Deep Blue)
+Use as the background color for your portfolio's hero section, header, or footer.
+Apply to buttons, icons, or other interactive elements to create a sense of depth.
+
+
+Secondary color: #4567B7 (Medium Blue)
+Use as the primary text color for headings, titles, and labels.
+Apply to backgrounds for sections, cards, or other containers to create a subtle contrast.
+
+
+Accent color: #6495ED (Light Blue)
+Use to highlight important information, such as buttons, links, or calls-to-action.
+Apply to icons, graphics, or other visual elements to add a touch of personality. */
+
