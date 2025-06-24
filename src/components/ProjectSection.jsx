@@ -1,19 +1,23 @@
 // src/components/ProjectSection.jsx
 import ProjectCard from "./ProjectCard";
+import todo from "../assets/images/todo.jpeg";
+import movie from "../assets/images/1st.jpeg";
+import food from "../assets/images/3rd.jpeg";
 
 const projects = [
   {
     title: "Food-Delivery Frontend Website",
     description: "",
-    image: "/project1.jpg", // add actual image in /public or /assets
+    image: food, // add actual image in /public or /assets
     stack: ["React", "Tailwind", "Framer Motion"],
     live: "https://food-delivery-by-abhay.vercel.app/",
     github: "https://github.com/aabhi20/Food-Delivery",
   },
   {
     title: "moovy",
-    description: "Search and display weather info using OpenWeather API.",
-    image: "/project2.jpg",
+    description:
+      "Moovy is a responsive movie discovery app built with React.js and Tailwind CSS. It integrates the TMDB API to display trending titles, genre filters, ratings, trailers, and cast info. Features include real-time search, dynamic routing, and modular components with state management using React Hooks or Context API.",
+    image: movie,
     stack: ["React", "API", "Responsive"],
     live: "https://moovy-abhay.vercel.app/",
     github: "https://github.com/aabhi20/moovy",
@@ -21,10 +25,10 @@ const projects = [
   {
     title: "Task Manager",
     description: "A simple task manager with CRUD features.",
-    image: "/project3.jpg",
+    image: todo,
     stack: ["React", "Appwrite", "Tailwind"],
-    live: "https://your-task-app.com",
-    github: "https://github.com/aabhi20/TO-do",
+    live: "https://to-to-list-by-abhay.vercel.app/",
+    github: "https://github.com/aabhi20/to-to-list",
   },
 ];
 
