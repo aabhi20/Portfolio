@@ -7,7 +7,8 @@ import food from "../assets/images/3rd.jpeg";
 const projects = [
   {
     title: "Food-Delivery Frontend Website",
-    description: "",
+    description:
+      "A frontend UI for a food delivery app with animated categories and restaurant sections.",
     image: food,
     stack: ["React", "Tailwind", "Framer Motion"],
     live: "https://food-delivery-by-abhay.vercel.app/",
@@ -23,9 +24,9 @@ const projects = [
     github: "https://github.com/aabhi20/moovy",
   },
   {
-    id:todo,
     title: "Task Manager",
-    description: "A simple task manager with CRUD features.",
+    description:
+      "A simple task manager app with full CRUD functionality using Appwrite and React.",
     image: todo,
     stack: ["React", "Appwrite", "Tailwind"],
     live: "https://to-to-list-by-abhay.vercel.app/",
@@ -37,7 +38,7 @@ const ProjectSection = () => {
   return (
     <section
       id="projects"
-      className="snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 py-24"
+      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 py-16"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 border-b border-[#1f2a45] pb-2">
@@ -46,7 +47,9 @@ const ProjectSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <div key={index} className="w-full max-w-sm mx-auto">
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>
