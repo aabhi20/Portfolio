@@ -9,7 +9,7 @@ const AboutSection = () => {
       id="about"
       className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 lg:px-24 py-24 md:py-0 flex items-center"
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center justify-between -mt-25">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center justify-between lg:-mt-25">
         {/* Avatar with blur glow */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -39,9 +39,20 @@ const AboutSection = () => {
           </h2>
 
           <p className="text-lg text-slate-300 mb-6 leading-relaxed max-w-3xl mx-auto lg:mx-0">
-            Hey! I'm <span className="text-white font-semibold">Abhay Mishra</span>, a frontend developer who mixes creativity with code. I care deeply about the user experience and love building fast, responsive, and visually polished apps.
-            <br /><br />
-            I'm fun to work with, but I take my work seriously — every pixel and line of code matters. I mostly work with <span className="text-[#5d88f7] font-medium">React.js</span> and <span className="text-[#5d88f7] font-medium">Tailwind CSS</span>, and I’m always looking to learn and do more.
+            Hey! I'm{" "}
+            <span className="text-white font-semibold">Abhay Mishra</span>, a
+            frontend developer who mixes creativity with code. I care deeply
+            about the user experience and love building fast, responsive, and
+            visually polished apps.
+            <br />
+            <br />
+            I'm fun to work with, but I take my work seriously — every pixel and
+            line of code matters. I mostly work with{" "}
+            <span className="text-[#5d88f7] font-medium">
+              React.js
+            </span> and{" "}
+            <span className="text-[#5d88f7] font-medium">Tailwind CSS</span>,
+            and I’m always looking to learn and do more.
           </p>
 
           <motion.a
