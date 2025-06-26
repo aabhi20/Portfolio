@@ -22,10 +22,10 @@ const MobileNav = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-14 bg-[#10152b] p-6 rounded-lg shadow-xl border border-[#1f2a45] backdrop-blur-md">
-          <ul className="space-y-4 text-right">
+        <div className="absolute right-0 top-14 bg-[#10152b] p-8 rounded-lg shadow-xl border border-[#1f2a45] backdrop-blur-md">
+          <ul className="space-y-4 text-left ">
             {navLinks.map((link) => (
-              <li key={link.name}>
+              <li key={link.name} className="border-b border-[#1f2a45] mb-2 pb-2">
                 <a
                   href={link.href}
                   className="text-white hover:text-[#5d88f7] font-medium transition"
