@@ -1,20 +1,16 @@
-// src/components/ContactSection.jsx
+// src/components/Contact.jsx
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 
-const ContactSection = () => {
+const Contact = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
     const name = formRef.current.user_name.value.trim();
     const email = formRef.current.user_email.value.trim();
@@ -28,7 +24,7 @@ const ContactSection = () => {
     setLoading(true);
 
     emailjs
-      .send(
+      .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
@@ -43,7 +39,7 @@ const ContactSection = () => {
         (error) => {
           setLoading(false);
           toast.error("Something went wrong. Please try again.");
-          console.error(error);
+          console.error("EmailJS Error:", error);
         }
       );
   };
@@ -101,4 +97,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default Contact;
