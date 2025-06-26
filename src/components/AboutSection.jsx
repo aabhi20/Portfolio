@@ -7,7 +7,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 lg:px-24 py-24 md:py-0 flex items-center"
+      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 lg:px-24 pb-24 pt-0 md:py-0 flex items-center"
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center justify-between lg:-mt-25">
         {/* Avatar with blur glow */}
