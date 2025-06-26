@@ -1,6 +1,7 @@
 import React from "react";
 import DekstopNav from "./DekstopNav";
 import MobileNav from "./MobileNav";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -10,16 +11,25 @@ const Navbar = () => {
       px-6 lg:px-12 py-4 flex justify-between items-center 
       shadow-[0_8px_16px_rgba(0,0,0,0.4)]"
     >
-      <a
+      {/* Logo */}
+      <motion.a
         href="#home"
-        className="text-2xl font-extrabold bg-gradient-to-r from-[#5d88f7] to-[#00c4ff] 
-        text-transparent bg-clip-text tracking-wide hover:opacity-90 transition-all duration-200"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-2xl font-bold tracking-wider px-4 py-2 rounded-xl
+        bg-[#1a2238] text-transparent bg-clip-text 
+        bg-gradient-to-r from-[#5d88f7] to-[#00c4ff]
+        border border-[#2c3552] shadow-lg 
+        hover:scale-105 transition-transform duration-300"
       >
-        Abhay Mishra
-      </a>
+        AM
+      </motion.a>
 
+      {/* Desktop Navigation */}
       <DekstopNav />
 
+      {/* Contact Me Button (only on sm and above) */}
       <a
         href="#contact"
         className="hidden sm:inline-block ml-4 bg-[#93e0f8] text-black font-semibold 
@@ -29,6 +39,7 @@ const Navbar = () => {
         Contact Me
       </a>
 
+      {/* Mobile Navigation Icon */}
       <div className="sm:hidden">
         <MobileNav />
       </div>
