@@ -12,6 +12,10 @@ const ContactSection = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
     const name = formRef.current.user_name.value.trim();
     const email = formRef.current.user_email.value.trim();
     const message = formRef.current.message.value.trim();
@@ -24,7 +28,7 @@ const ContactSection = () => {
     setLoading(true);
 
     emailjs
-      .sendForm(
+      .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
@@ -39,7 +43,7 @@ const ContactSection = () => {
         (error) => {
           setLoading(false);
           toast.error("Something went wrong. Please try again.");
-          console.error("EmailJS Error:", error);
+          console.error(error);
         }
       );
   };
