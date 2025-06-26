@@ -3,8 +3,9 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
-const Contact = () => {
+const ContactSection = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
 
@@ -23,21 +24,21 @@ const Contact = () => {
     setLoading(true);
 
     emailjs
-      .sendForm(
+      .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formRef.current,
+        {
+          user_name: name,
+          user_email: email,
+          message: message,
+        },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setLoading(false);
-
-          // Blur inputs before reset to avoid scroll jump
-          Array.from(formRef.current.elements).forEach((el) => el.blur());
-          formRef.current.reset();
-
           toast.success("Message sent successfully!");
+          formRef.current.reset();
         },
         (error) => {
           setLoading(false);
@@ -50,8 +51,9 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 pb-32 flex items-center justify-center"
+      className="scroll-mt-24 bg-[#0d0a1c] text-[#c3cad9] px-6 pt-16 pb-32 flex flex-col items-center justify-center"
     >
+      {/* Contact Form */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -94,23 +96,41 @@ const Contact = () => {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-
-        {/* Toast Notifications */}
-        <ToastContainer
-          position="bottom-center"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
+        <ToastContainer />
       </motion.div>
+
+      {/* Footer Socials */}
+      <div className="mt-12 text-center">
+        <p className="text-white mb-4 font-semibold text-lg">Connect with me</p>
+        <div className="flex justify-center space-x-6 text-2xl text-[#5d88f7]">
+          <a
+            href="https://github.com/aabhi20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#93e0f8] transition"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abhay-mishra-mus/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#93e0f8] transition"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://www.instagram.com/_.abhay._.mishra._/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#93e0f8] transition"
+          >
+            <FaInstagram />
+          </a>
+        </div>
+      </div>
     </section>
   );
 };
 
-export default Contact;
+export default ContactSection;
