@@ -34,12 +34,12 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="flex-1 text-center lg:text-left"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 -mt-5">
             About Me
           </h2>
 
-          <p className="text-lg text-slate-300 mb-6 leading-relaxed max-w-3xl mx-auto lg:mx-0">
-            Hey! I'm{" "}
+          <p className="text-lg text-slate-300 mb-6  leading-relaxed max-w-3xl mx-auto lg:mx-0">
+            Hey! I'm
             <span className="text-white font-semibold">Abhay Mishra</span>, a
             frontend developer who mixes creativity with code. I care deeply
             about the user experience and love building fast, responsive, and
