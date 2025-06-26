@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
@@ -33,13 +32,17 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          toast.success("Message sent successfully!");
+
+          // Blur inputs before reset to avoid scroll jump
+          Array.from(formRef.current.elements).forEach((el) => el.blur());
           formRef.current.reset();
+
+          toast.success("Message sent successfully!");
         },
         (error) => {
           setLoading(false);
           toast.error("Something went wrong. Please try again.");
-          console.error("EmailJS Error:", error);
+          console.error(error);
         }
       );
   };
@@ -91,7 +94,20 @@ const Contact = () => {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-        <ToastContainer />
+
+        {/* Toast Notifications */}
+        <ToastContainer
+          position="bottom-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </motion.div>
     </section>
   );
