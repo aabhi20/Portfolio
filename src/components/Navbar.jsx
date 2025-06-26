@@ -17,7 +17,7 @@ const Navbar = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-2xl font-bold tracking-wider px-4 py-2 rounded-xl
+        className="text-2xl font-bold tracking-wider px-4 py-1 rounded-xl
         bg-[#1a2238] text-transparent bg-clip-text 
         bg-gradient-to-r from-[#5d88f7] to-[#00c4ff]
         border border-[#2c3552] shadow-lg 
