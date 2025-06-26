@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-[#0a0a1f] flex flex-col lg:flex-row items-center justify-center px-6 md:px-12 lg:px-20 pt-32 lg:pt-0 lg:gap-[10vw] overflow-hidden"
+      className="relative min-h-screen bg-[#0a0a1f] flex flex-col lg:flex-row items-center justify-center px-6 md:px-12 lg:px-20 pb-24 pt-12 lg:pt-0 lg:gap-[10vw] overflow-hidden"
     >
       {/* Left Side Text */}
       <div className="w-full lg:w-[40vw] lg:ml-auto text-white z-10 max-w-[600px]">

@@ -10,7 +10,7 @@ const navLinks = [
 
 const DekstopNav = () => {
   return (
-    <ul className="hidden lg:flex space-x-8 items-center">
+    <ul className="hidden md:flex space-x-8 items-center">
       {navLinks.map((link) => (
         <li key={link.name}>
           <a
