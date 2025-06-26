@@ -41,7 +41,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 pb-16 pt-4 flex items-center justify-center "
+      className="font-[Rubik] scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 pb-16 pt-4 flex items-center justify-center "
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

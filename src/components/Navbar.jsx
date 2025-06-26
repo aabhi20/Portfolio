@@ -10,7 +10,6 @@ const Navbar = () => {
       px-6 lg:px-12 py-4 flex justify-between items-center 
       shadow-[0_8px_16px_rgba(0,0,0,0.4)]"
     >
-      {/* Logo / Name */}
       <a
         href="#home"
         className="text-2xl font-extrabold bg-gradient-to-r from-[#5d88f7] to-[#00c4ff] 
@@ -21,7 +20,6 @@ const Navbar = () => {
 
       <DekstopNav />
 
-      {/* CTA Button */}
       <a
         href="#contact"
         className="hidden sm:inline-block ml-4 bg-[#93e0f8] text-black font-semibold 
@@ -31,7 +29,6 @@ const Navbar = () => {
         Contact Me
       </a>
 
-      {/* Mobile Nav */}
       <div className="sm:hidden">
         <MobileNav />
       </div>

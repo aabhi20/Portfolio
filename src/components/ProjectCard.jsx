@@ -12,6 +12,18 @@ const ProjectCard = ({ project, onClick }) => {
       className="cursor-pointer bg-[#10152b] border border-[#1f2a45] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
     >
       {/* Project Image */}
+
+      <h3
+        className="text-xl font-semibold text-white p-4 font-[Rubik]  bg-gradient-to-r from-[#1e3a8a] to-[#2563eb]
+
+
+
+
+
+"
+      >
+        {project.title}
+      </h3>
       <div className="h-100 w-full overflow-hidden">
         <img
           src={project.image}
@@ -24,7 +36,6 @@ const ProjectCard = ({ project, onClick }) => {
 
       {/* Text Content */}
       <div className="p-6 space-y-4">
-        <h3 className="text-xl font-semibold text-white">{project.title}</h3>
         <p className="text-slate-400 text-sm line-clamp-3">
           {project.description}
         </p>
