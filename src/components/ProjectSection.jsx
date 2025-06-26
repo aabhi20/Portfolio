@@ -38,7 +38,7 @@ const ProjectSection = () => {
   return (
     <section
       id="projects"
-      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 py-16"
+      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 pb-16 pt-4"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 border-b border-[#1f2a45] pb-2">
