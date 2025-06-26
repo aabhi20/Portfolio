@@ -41,7 +41,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 py-16 flex items-center justify-center"
+      className="scroll-mt-24 snap-start min-h-screen bg-[#0d0a1c] text-[#c3cad9] px-6 py-16 flex items-center justify-center "
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
